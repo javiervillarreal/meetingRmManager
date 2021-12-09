@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Room book Log" max_length="40" name="x_721850_meetingrm_room_book_log" type="collection">
+        <element label="Booked Time" max_length="40" name="booked_time" type="insert_timestamp"/>
+        <element label="duration" max_length="40" name="duration" type="glide_date_time"/>
+        <element label="flag" max_length="40" name="flag" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Booking Reference Number" max_length="40" name="number" type="string"/>
+        <element label="Room Number" max_length="32" name="room_number" reference="x_721850_meetingrm_meeting_room" type="reference"/>
+        <element label="Start Time" max_length="40" name="start_time" type="glide_date_time"/>
+        <index name="index">
+            <element name="room_number"/>
+        </index>
+    </element>
+</database>
